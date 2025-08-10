@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-mongodb
+spec:
+  containers:
+    - name: test-mongodb
+      image: bitnami/mongodb:latest
+      ports:
+        - containerPort: 27017
+      env:
+        - name: MONGODB_ROOT_PASSWORD
+          value: ""
